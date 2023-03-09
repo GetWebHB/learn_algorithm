@@ -11,7 +11,7 @@ class ArrayStack<T> implements IStack<T> {
   peek(): T | undefined {
     return this.data[this.data.length - 1];
   }
-  size(): Number {
+  size(): number {
     return this.data.length;
   }
   isEmpty(): boolean {
@@ -30,3 +30,5 @@ const stack = new ArrayStack<string>();
 // console.log(stack.pop());
 // console.log(stack.isEmpty());
 // console.log(stack.peek());
+
+export { ArrayStack };

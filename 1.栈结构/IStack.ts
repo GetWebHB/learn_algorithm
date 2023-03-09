@@ -6,7 +6,7 @@ export interface IStack<T> {
   // 查看栈顶元素
   peek(): T | undefined;
   // 元素个数
-  size(): Number;
+  size(): number;
   // 是否为空
   isEmpty(): boolean;
 }
