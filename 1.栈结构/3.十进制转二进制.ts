@@ -17,7 +17,7 @@ const numberToBit = (bit: number): string => {
   const stack = new ArrayStack<number>();
   let str = "";
 
-  while (bit > 1) {
+  while (bit >= 1) {
     stack.push(bit % 2);
     bit = Math.floor(bit / 2);
   }
@@ -28,11 +28,3 @@ const numberToBit = (bit: number): string => {
 };
 
 numberToBit(35);
-
-/*
-  
-  1 0 0 0 1 1
-
-  32 16 8 4 2 1
-
-*/
