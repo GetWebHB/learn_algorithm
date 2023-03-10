@@ -11,20 +11,21 @@ import { ArrayStack } from "./1.ArrayStack";
   2 0
   1 1
 
-
 */
 const numberToBit = (bit: number): string => {
   const stack = new ArrayStack<number>();
   let str = "";
 
-  while (bit >= 1) {
+  while (bit > 0) {
     stack.push(bit % 2);
     bit = Math.floor(bit / 2);
   }
 
-  console.log(stack);
+  while (!stack.isEmpty()) {
+    str += stack.pop();
+  }
 
   return str;
 };
 
-numberToBit(35);
+console.log(numberToBit(35));
